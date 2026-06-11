@@ -42,7 +42,7 @@ Indices = repmat(1 : L, 1, 1);
 
 % get the indices that coincide wiht the data timepoints
 idx = zeros(1, L);
-idx(DCM.delay:floor(DCM.Y.dt/DCM.U.dt):end) = 1;
+idx(DCM.delay(1):floor(DCM.Y.dt/DCM.U.dt):end) = 1;
 
 % asign those timings
 Indices = Indices(idx>0);
